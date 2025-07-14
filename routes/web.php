@@ -8,12 +8,6 @@ use App\Livewire\Informasi\IKM;
 use App\Livewire\Saran\Saran;
 use App\Livewire\PPID\PPID;
 use App\Livewire\Beranda\Galeri;
-// use App\Livewire\Beranda\Pengumuman;
-
-
-// Route::get('/', function () {
-//     return view('beranda.beranda');
-// })->name('beranda');
 
 Route::get('/', Beranda::class)->name('beranda');
 
@@ -26,7 +20,6 @@ Route::get('/saran', action: Saran::class)->name('saran');
 Route::get('/ppid', action: PPID::class)->name('ppid');
 
 Route::get('/galeri', Galeri::class)->name('galeri');
-
 
 // Route::get('regulasi', function () {
 //     return view('regulasi');

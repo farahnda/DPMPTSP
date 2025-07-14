@@ -46,9 +46,10 @@ body {
   bottom: 20px;
   width: 50px;
   height: 50px;
-  background-color: #007bff; /* Warna biru Bootstrap */
-  color: white;
-  border-radius: 8px;
+  background-color: #004cb3; /* Warna biru Bootstrap */
+  border-radius: 50%;
+  border: 2px solid #ffffff; /* Warna putih */
+  color: #ffffff;
   z-index: 9999; /* Supaya selalu di atas */
   display: none; /* Disembunyikan dulu, tampil saat scroll */
   transition: opacity 0.3s ease-in-out;
@@ -56,6 +57,11 @@ body {
 
 .back-to-top i {
   font-size: 1.5rem;
+}
+
+.back-to-top:hover {
+  background-color: #ffffff; /* Warna biru gelap saat hover */
+  color: #26282b; 
 }
 
 .back-to-top.show {

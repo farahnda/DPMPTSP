@@ -1,3 +1,5 @@
+// event untuk back to top button
+
 document.addEventListener("DOMContentLoaded", function () {
   const isDesktop = window.innerWidth >= 992;
 
