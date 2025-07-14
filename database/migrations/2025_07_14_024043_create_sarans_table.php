@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('sarans', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->email('saran'); 
+            $table->string('email'); 
+            $table->text('komentar'); 
+            $
             $table->timestamps();
         });
     }
