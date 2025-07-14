@@ -1,4 +1,4 @@
-@props([
+{{-- @props([
     'on',
 ])
 
@@ -11,4 +11,4 @@
     {{ $attributes->merge(['class' => 'text-sm']) }}
 >
     {{ $slot->isEmpty() ? __('Saved.') : $slot }}
-</div>
+</div> --}}

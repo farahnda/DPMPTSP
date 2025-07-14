@@ -1,0 +1,51 @@
+.gallery-item-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 66.66%; /* 3:2 aspect ratio fallback */
+    background-color: #eee;
+}
+
+.gallery-item-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+.gallery-item-wrapper:hover img {
+    transform: scale(1.05); /* efek zoom saat hover */
+    filter: brightness(80%); /* sedikit gelap saat hover */
+}
+
+.gallery-item-wrapper-auto {
+    width: 100%;
+    background-color: #eee;
+    overflow: hidden;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-item-wrapper-auto:hover {
+    filter: brightness(80%);
+    transform: scale(1.02);
+}
+
+.gallery-item-wrapper-auto img {
+    width: 100%;
+    height: auto !important;
+    display: block;
+    object-fit: contain !important;
+    transition: transform 0.3s ease;
+}
+
+.pengumuman-img {
+    position: static;
+    width: 100%;
+    height: auto !important; /* biar tinggi menyesuaikan */
+    object-fit: contain !important; /* tidak terpotong, rasio dipertahankan */
+}
+

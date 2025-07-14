@@ -1,0 +1,46 @@
+<style>
+  .pdf-frame {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+
+  /* Tambahan agar semua card punya tinggi konsisten */
+  .row.g-4 > div {
+    display: flex;
+  }
+
+  /* Jarak atas bawah tombol dibuat kecil */
+  .mt-3 {
+    margin-top: 0.75rem !important;
+  }
+
+  /* Jika masih terlalu renggang, bisa pakai yang lebih kecil */
+  .mt-2 {
+    margin-top: 0.5rem !important;
+  }
+
+  .border.rounded.p-3 {
+    width: 100%;
+  }
+
+  .btn-custom {
+  background-color: #5c768d;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn-custom:hover {
+  background-color: #26282b;
+  color: white;
+  text-decoration: none;
+}
+
+</style>

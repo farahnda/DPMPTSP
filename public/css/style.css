@@ -1,0 +1,41 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.animated-heading {
+  animation: fadeInDown 1s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+/* btn-custom {
+  background-color: #5c768d;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.25rem;
+  text-decoration: none;
+} */
+
+.btn-custom {
+  background-color: #5c768d;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+} 
+
+/* .btn-custom:hover {
+  background-color: #26282b;
+  color: white;
+  text-decoration: none;
+} */ */
+
+.btn-custom:hover {
+  background-color: #26282b;
+}
