@@ -33,7 +33,7 @@ class Pengumuman extends Component
     {
         return view('livewire.beranda.pengumuman', [
             'pengumumans' => $this->pengumumans,
-            'galeris' => Galeri::latest()->take(6)->get()
+            // 'galeris' => Galeri::latest()->take(6)->get()
         ]);
     }
 }

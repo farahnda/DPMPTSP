@@ -5,9 +5,10 @@ use Livewire\Volt\Volt;
 use App\Livewire\Beranda\Beranda;
 use App\Livewire\PenanamanModal\Regulasi;
 use App\Livewire\Informasi\IKM;
-use App\Livewire\Saran\Saran;
+// use App\Livewire\Saran\Saran;
 use App\Livewire\PPID\PPID;
 use App\Livewire\Beranda\Galeri;
+use App\Livewire\Beranda\CreateGaleri;
 
 Route::get('/', Beranda::class)->name('beranda');
 
@@ -15,11 +16,13 @@ Route::get('/regulasi', Regulasi::class)->name('regulasi');
 
 Route::get('/ikm', action: IKM::class)->name('ikm');
 
-Route::get('/saran', action: Saran::class)->name('saran');
+// Route::get('/saran', action: Saran::class)->name(name: 'saran');
 
 Route::get('/ppid', action: PPID::class)->name('ppid');
 
-Route::get('/galeri', Galeri::class)->name('galeri');
+// Route::get('/galeri', Galeri::class)->name('galeri');
+
+Route::get('/galeri/create', action: CreateGaleri::class)->name('galeri.create');
 
 // Route::get('regulasi', function () {
 //     return view('regulasi');
