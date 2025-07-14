@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="" name="description">
     <meta content="" name="keywords">
     
@@ -9,12 +10,14 @@
     
     <title>{{ config('app.name', 'DPMPTSP Kota Tasikmalaya') }}</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+
+    <!-- Lightbox (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
 
     <!-- Favicons -->
     <link rel="shortcut icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/1/1e/Logo_Kota_Tasikmalaya.png">
@@ -48,15 +51,20 @@
     <link rel="stylesheet" href="{{ asset('css/ppid.css') }}">
     <link rel="stylesheet" href="{{ asset('css/regulasi.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/topbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/card.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/content.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/berita.css') }}">
 
     @stack('styles')
     @livewireStyles
 </head>
 <body>  
-    <livewire:top-bar/>    
-    {{-- <livewire:navbar />     --}}
+    <livewire:topbar />
+    <livewire:navbar />    
     
-    <main>
+    <main class="py-4">
         {{ $slot }}
     </main>
     
@@ -67,7 +75,6 @@
 
     <livewire:footer />
 
-    @livewireScripts
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Vendor JS Files -->
@@ -81,6 +88,41 @@
 
     <!-- Template Main JS File -->
     <script src="https://dpmptsp.tasikmalayakota.go.id/public_html/desktop/assets/assets/js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+    <!-- Dropdown Behavior Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const isDesktop = window.innerWidth >= 992;
+
+        // Tambah class hover di desktop, hapus di mobile
+        document.querySelectorAll('.nav-item.dropdown').forEach(function (dropdown) {
+          if (isDesktop) {
+            dropdown.classList.add('dropdown-hover');
+          } else {
+            dropdown.classList.remove('dropdown-hover');
+          }
+        });
+
+        // Auto close dropdown saat item diklik di mobile
+        if (!isDesktop) {
+          document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(function (item) {
+            item.addEventListener('click', function () {
+              const dropdown = item.closest('.dropdown');
+              const toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
+              const instance = bootstrap.Dropdown.getInstance(toggle);
+              if (instance) {
+                instance.hide();
+              }
+            });
+          });
+        }
+      });
+    </script>
+
+    @livewireScripts
     @stack('scripts')
 </body>
 </html>
