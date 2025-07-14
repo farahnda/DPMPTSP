@@ -28,7 +28,7 @@
     {{-- <link rel="stylesheet" href="{{ asset('css/cards.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('css/carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/galeri.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/foto.css') }}">
     <link rel="stylesheet" href="{{ asset('css/ikm.css') }}">
     <link rel="stylesheet" href="{{ asset('css/ppid.css') }}">
     <link rel="stylesheet" href="{{ asset('css/regulasi.css') }}">
@@ -58,38 +58,13 @@
     <livewire:footer />
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
 
-    <!-- Dropdown Behavior Script -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const isDesktop = window.innerWidth >= 992;
-
-        // Tambah class hover di desktop, hapus di mobile
-        document.querySelectorAll('.nav-item.dropdown').forEach(function (dropdown) {
-          if (isDesktop) {
-            dropdown.classList.add('dropdown-hover');
-          } else {
-            dropdown.classList.remove('dropdown-hover');
-          }
-        });
-
-        // Auto close dropdown saat item diklik di mobile
-        if (!isDesktop) {
-          document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(function (item) {
-            item.addEventListener('click', function () {
-              const dropdown = item.closest('.dropdown');
-              const toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
-              const instance = bootstrap.Dropdown.getInstance(toggle);
-              if (instance) {
-                instance.hide();
-              }
-            });
-          });
-        }
-      });
-    </script>
 
     @livewireScripts
     @stack('scripts')
+    
 </body>
 </html>

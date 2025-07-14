@@ -1,22 +1,5 @@
 <div>
-    <div class="container py-5">
-        <h2 class="mb-4 text-center">Galeri</h2>
-        <div id="lightgallery-foto" class="row g-3">
-            @foreach($photos as $photo)
-            <div class="col-12 col-lg-4">
-                <a href="{{ $photo['image'] }}" class="gallery-item" data-lg-size="1600-1067"
-                    data-sub-html="<h4>{{ $photo['title'] }}</h4><p>{{ $photo['description'] }}</p>">
-                    <div class="gallery-item-wrapper shadow-sm">
-                        <img src="{{ $photo['image'] }}" alt="{{ $photo['title'] }}" class="img-fluid" />
-                    </div>
-                </a>
-            </div>
-            @endforeach
-        </div>
-    </div>
-
     <hr>
-
     <div class="container py-5">
         <h2 class="mb-4 text-center">Pengumuman</h2>
         <div id="lightgallery-pengumuman" class="row g-3">
@@ -32,6 +15,7 @@
             @endforeach
         </div>
     </div>
+</div>
 
     @once
         @push('scripts')

@@ -49,3 +49,11 @@
     object-fit: contain !important; /* tidak terpotong, rasio dipertahankan */
 }
 
+.galeri-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center; /* penting: crop dari tengah */
+    display: block;
+}
+

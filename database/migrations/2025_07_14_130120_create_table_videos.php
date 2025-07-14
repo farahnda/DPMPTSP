@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('galeris', function (Blueprint $table) {
+        Schema::create('videos', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
             $table->text('deskripsi');
-            $table->string('gambar')->nullable(); // path gambar disimpan di folder public/storage/galeri
-            $table->string('gambarUrl')->nullable(); // URL gambar jika tidak diupload, bisa diisi dengan URL eksternal
+            $table->string('video')->nullable(); // path gambar disimpan di folder public/storage/galeri
+            $table->string('videoUrl')->nullable(); // URL gambar jika tidak diupload, bisa diisi dengan URL eksternal
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('galeris');
+        //
     }
 };

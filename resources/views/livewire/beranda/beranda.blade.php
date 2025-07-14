@@ -1,3 +1,4 @@
+<div>
 <div id="carouselExampleIndicators" class="carousel slide position-relative carousel-wrapper" data-bs-ride="carousel">
     <!-- Overlay gelap -->
     <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.6); z-index: 2;"></div>
@@ -36,4 +37,7 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden"></span>
     </button>
+</div>
+<livewire:beranda.galeri-beranda />
+<livewire:beranda.pengumuman />
 </div>
