@@ -24,7 +24,7 @@
 
     <!-- Google Fonts -->
     {{-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet"> --}}
-
+{{-- 
     <!-- Vendor CSS Files -->
     <link href="https://dpmptsp.tasikmalayakota.go.id/public_html/desktop/assets/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
     <link href="https://dpmptsp.tasikmalayakota.go.id/public_html/desktop/assets/assets/vendor/aos/aos.css" rel="stylesheet">
@@ -35,7 +35,7 @@
     <link href="https://dpmptsp.tasikmalayakota.go.id/public_html/desktop/assets/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="https://dpmptsp.tasikmalayakota.go.id/public_html/desktop/assets/assets/css/style.css" rel="stylesheet">
+    <link href="https://dpmptsp.tasikmalayakota.go.id/public_html/desktop/assets/assets/css/style.css" rel="stylesheet"> --}}
 
     <!-- ===================== MASTER CSS ===================== -->
     <!-- Template Name: Mamba - v4.7.0 -->
@@ -61,10 +61,10 @@
     @livewireStyles
 </head>
 <body>  
-    <livewire:topbar />
-    <livewire:navbar />    
+    {{-- <livewire:topbar />
+    <livewire:navbar />     --}}
     
-    <main class="py-4">
+    <main>
         {{ $slot }}
     </main>
     
