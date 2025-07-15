@@ -1,69 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Logo_Kota_Tasikmalaya.png/1201px-Logo_Kota_Tasikmalaya.png" type="image/png">
-    
-    <title>{{ config('app.name', 'DPMPTSP Kota Tasikmalaya') }}</title>
+<div>
+<div id="carouselExampleIndicators" class="carousel slide position-relative carousel-wrapper" data-bs-ride="carousel">
+    <!-- Overlay gelap -->
+    <div class="position-absolute top-0 start-0 w-100 h-100"
+     style="background-color: rgba(0, 0, 0, 0.6); z-index: 2; pointer-events: none;"></div>
+    <!-- Teks statis -->
+    <div class="carousel-caption-static text-white">
+        <h1 class="animated-heading">Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu</h1>
+        <a href="#" class="btn-custom animated-heading">Baca Selengkapnya</a>
+    </div>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Carousel Items -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrrgNJDza1Qft2DhirsUmdqYdiMBNR2_Ey98zXcYvNEqC24nGYFmkOu2TeTqCiiOCATmVu5uCW6B4b13g7Da_fPUosOZkt9uqeX5ALS4CcR6C2_61x75WVFdmhVIGag1Is60i-eXw=s1360-w1360-h1020-rw" class="d-block w-100" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr7KdwcaSyIUYpcJImFSVBTI71DucFBq7nIJLfrKcaJwyTOJ7r92UqHJH4d2PLMNJv9rg9l6DkFoeEtJZT12M7Hl5UsRi9IVO_rnA9ez3M1aqXMr4vf0TYW54qoIXnJZGVJu-CF=s1360-w1360-h1020-rw" class="d-block w-100" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqSTcT-uUvrm2HrOobPBUSgdvgZXcM4fyIiR-2Nj8AznRb_-zVwTYnF9FkOTtO3sa4OkqZwecCWgpaHykNiqABVzoav34pGb-w1x2Ezvnad-Z5MqgMPrjw5JqhhBRDQAPeNuKeq=s1360-w1360-h1020-rw" class="d-block w-100" alt="Slide 3">
+        </div>
+    </div>
 
-    <!-- Lightbox (optional) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <!-- Tombol Navigasi -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden"></span>
+    </button>
+</div>
 
-    <!-- Favicons -->
-    <link rel="shortcut icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/1/1e/Logo_Kota_Tasikmalaya.png">
-
-    <!-- Google Fonts -->
-    {{-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet"> --}}
-
-    {{-- <link rel="stylesheet" href="{{ asset('css/cards.css') }}"> --}}
-    <link rel="stylesheet" href="{{ asset('css/carousel.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/foto.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/ikm.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/ppid.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/regulasi.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/topbar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/card.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/content.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/berita.css') }}">
-
-    @stack('styles')
-    @livewireStyles
-</head>
-<body>  
-    <livewire:topbar />
-    <livewire:navbar />
-    
-    <main>
-        {{ $slot }}
-    </main>
-    
-    <!-- Back to Top -->
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-        <i class="bi bi-arrow-up-short"></i>
-    </a>
-
-    <livewire:footer />
-
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-
-    @livewireScripts
-    @stack('scripts')
-    
-</body>
-</html>
+<livewire:beranda.cards />
+<livewire:beranda.content />
+<livewire:beranda.berita />
+<livewire:beranda.galeri-beranda />
+<livewire:beranda.pengumuman />
+</div>
