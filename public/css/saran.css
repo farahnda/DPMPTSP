@@ -1,0 +1,14 @@
+/* supaya semua label sama lebar */
+  .form-label-inline {
+    width: 100px;        /* atur lebar label */
+    margin-right: 3px;  /* jarak ke input */
+    text-align: left;   /* opsional: teks rata kanan */
+  }
+  .form-row {
+    margin-bottom: 0.5rem; /* jarak antar baris */
+  }
+
+  .form-text {
+  margin-top: 0 !important;    /* hilangkan jarak atas */
+  margin-bottom: 0.5rem;       /* kasih jarak bawah */
+}

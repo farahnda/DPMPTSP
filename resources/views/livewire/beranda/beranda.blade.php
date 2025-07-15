@@ -1,7 +1,8 @@
 <div>
 <div id="carouselExampleIndicators" class="carousel slide position-relative carousel-wrapper" data-bs-ride="carousel">
     <!-- Overlay gelap -->
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.6); z-index: 2;"></div>
+    <div class="position-absolute top-0 start-0 w-100 h-100"
+     style="background-color: rgba(0, 0, 0, 0.6); z-index: 2; pointer-events: none;"></div>
     <!-- Teks statis -->
     <div class="carousel-caption-static text-white">
         <h1 class="animated-heading">Dinas Penanaman Modal dan Pelayanan Terpadu Satu Pintu</h1>

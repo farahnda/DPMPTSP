@@ -4,6 +4,7 @@ namespace App\Livewire\Saran;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Http; 
+use Illuminate\Support\Facades\Log;
 use App\Models\Saran as SaranModel;
 
 class Saran extends Component
@@ -20,19 +21,25 @@ class Saran extends Component
             'captcha' => 'required', // wajib
         ]);
 
-        // Verifikasi CAPTCHA ke Google
-        $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
-            'secret' => env('RECAPTCHA_SECRET_KEY'),
-            'response' => $this->captcha,
-            'remoteip' => request()->ip(),
+        Log::info('Submit terpanggil', [
+            'nama' => $this->nama,
+            'email' => $this->email,
+            'no_hp' => $this->no_hp,
+            'komentar' => $this->komentar,
         ]);
 
-        if (! $response->json('success')) {
-            $this->addError('captcha', 'Captcha tidak valid.');
+         $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+            'secret' => env('RECAPTCHA_SECRET_KEY'),
+            'response' => $this->captcha
+        ]);
+
+        if (!($response->json()['success'] ?? false)) {
+            $this->addError('captcha', 'Verifikasi captcha gagal.');
             return;
         }
 
-        // Simpan data jika captcha valid
+        Log::info('Captcha valid, mau simpan ke DB');
+
         SaranModel::create([
             'nama' => $this->nama,
             'email' => $this->email,
@@ -40,9 +47,11 @@ class Saran extends Component
             'komentar' => $this->komentar,
         ]);
 
-        session()->flash('success', 'Saran berhasil dikirim!');
-        $this->reset();
-        $this->captcha = null;
+        Log::info('Data sudah dipanggil untuk disimpan');
+
+        session()->flash('success', 'Terima kasih atas saran dan aduan Anda!');
+        // reset form
+        $this->reset('nama','email','no_hp','komentar','captcha');
     }
     
     public function render()

@@ -11,7 +11,7 @@
 .carousel-indicators [data-bs-target] {
   width: 10px;
   height: 10px;
-  border-radius: 50%; !important;
+  border-radius: 50%;;
   background-color: #fff;
   border: none;
   padding: 0;
@@ -23,17 +23,17 @@
 }
 
 .carousel-indicators button {
-  width: 10px !important;
-  height: 10px !important;
-  border-radius: 50% !important;
-  background-color: #fff !important;
-  border: none !important;
-  padding: 0 !important;
-  margin: 0 4px !important;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: none;
+  padding: 0;
+  margin: 0 4px;
 }
 
 .carousel-indicators button.active {
-  background-color: #428bca !important;
+  background-color: #428bca;
 }
 
 .carousel-indicators [data-bs-target].active {
@@ -114,7 +114,7 @@
 
   .carousel-control-prev,
   .carousel-control-next {
-    z-index: 10 !important;
+    z-index: 10;
   }
 
   .carousel-item img {
