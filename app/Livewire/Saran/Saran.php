@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Http;
 
 class Saran extends Component
 {
-    public $nama, $email, $komentar, $captcha;
+    public $nama, $email, $komentar;
 
     public function submit()
     {

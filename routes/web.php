@@ -3,11 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 use App\Livewire\Beranda\Beranda;
+use App\Livewire\Beranda\GaleriBeranda;
+use App\Livewire\Beranda\Pengumuman;
 use App\Livewire\PenanamanModal\Regulasi;
 use App\Livewire\Informasi\IKM;
 use App\Livewire\PPID\PPID;
-use App\Livewire\Beranda\GaleriBeranda;
-use App\Livewire\Beranda\Pengumuman;
 use App\Livewire\Galeri\CreateGaleri;
 use App\Livewire\Galeri\ShowGaleri;
 use App\Livewire\BeritaGaleri\CreateVideo;
@@ -29,32 +29,6 @@ Route::get('beranda/galeri-beranda', GaleriBeranda::class)->name('beranda.galeri
 Route::get('berita-galeri/create', CreateVideo::class)->name('berita-galeri.create');
 Route::get('/berita-galeri/show-video', ShowVideo::class)->name('berita-galeri.show-video');
 Route::get('/berita-galeri', BeritaGaleri::class)->name('berita-galeri.berita-galeri');
-
-
-// Route::get('regulasi', function () {
-//     return view('regulasi');
-// })->name('regulasi');
-
-
-// Route::get('regulasi', function () {
-//     return view('regulasi');
-// })->name('regulasi');
-
-// Route::get('gambar', function () {
-//     return view('gambar');
-// })->name('gambar');
-
-// Route::get('footer', function () {
-//     return view('footer');
-// })->name('footer');
-
-// Route::get('carousel', function () {
-//     return view('carousel');
-// })->name('carousel');
-
-// Route::get('galeri', function () {
-//     return view(view: 'galeri');
-// })->name('galeri');
 
 // Route::view('dashboard', 'dashboard')
 //     ->middleware(['auth', 'verified'])
