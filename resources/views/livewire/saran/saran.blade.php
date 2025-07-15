@@ -1,36 +1,80 @@
-<form wire:submit.prevent="submit">
-    @csrf
+<div class="container my-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Form Saran & Komentar</h5>
+        </div>
+        <div class="card-body">
+            {{-- Flash Message --}}
+            @if (session()->has('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
 
-    <label>Nama</label>
-    <input type="text" wire:model.defer="nama">
-    @error('nama') <span>{{ $message }}</span> @enderror
+            <form id="saran-form">
+                @csrf
 
-    <label>Email</label>
-    <input type="email" wire:model.defer="email">
-    @error('email') <span>{{ $message }}</span> @enderror
+                <!-- Nama -->
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Nama</label>
+                    <input type="text" id="nama" class="form-control" wire:model.defer="nama" placeholder="Masukkan nama lengkap">
+                    @error('nama') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
+                </div>
 
-    <label>Komentar</label>
-    <textarea wire:model.defer="komentar"></textarea>
-    @error('komentar') <span>{{ $message }}</span> @enderror
+                <!-- Email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control" wire:model.defer="email" placeholder="Masukkan email aktif">
+                    @error('email') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
+                </div>
 
-    <label>Captcha</label>
-    <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
-    <input type="hidden" wire:model.defer="captcha" id="captcha">
-    @error('captcha') <span>{{ $message }}</span> @enderror
+                <!-- No HP -->
+                <div class="mb-3">
+                    <label for="no_hp" class="form-label">No HP</label>
+                    <input type="text" id="no_hp" class="form-control" wire:model.defer="no_hp" placeholder="Masukkan nomor HP">
+                    @error('no_hp') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
+                </div>
 
-    <button type="submit">Kirim</button>
+                <!-- Komentar -->
+                <div class="mb-3">
+                    <label for="komentar" class="form-label">Komentar</label>
+                    <textarea id="komentar" rows="4" class="form-control" wire:model.defer="komentar" placeholder="Tulis saran atau komentar Anda"></textarea>
+                    @error('komentar') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
+                </div>
+
+                <div class="mb-3">
+        <label class="form-label">Verifikasi Captcha</label>
+        <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
+        @error('captcha') <div class="text-danger small mt-1">{{ $message }}</div> @enderror
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        <i class="bi bi-send"></i> Kirim
+    </button>
 </form>
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
-    window.onload = function () {
-        window.grecaptcha.ready(function () {
-            grecaptcha.render('recaptcha-container', {
-                sitekey: '{{ env('RECAPTCHA_SITE_KEY') }}',
-                callback: function (token) {
-                    Livewire.find('@this').set('captcha', token);
-                }
-            });
-        });
-    };
+document.addEventListener('livewire:load', function () {
+    const form = document.getElementById('saran-form');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); // cegah form submit default
+
+        // Ambil token dari kotak reCAPTCHA
+        const token = grecaptcha.getResponse();
+
+        if (!token) {
+            // kalau kotak belum dicentang
+            alert('Silakan centang captcha terlebih dahulu!');
+            return;
+        }
+
+        // Set token ke Livewire property
+        @this.set('captcha', token);
+
+        // Panggil method submit di Livewire
+        @this.call('submit');
+    });
+});
 </script>
