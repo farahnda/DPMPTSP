@@ -22,3 +22,16 @@
 .card-icon {
   font-size: 3em;
 }
+
+.animate-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

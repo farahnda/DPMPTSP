@@ -1,5 +1,5 @@
 <div>
-<div id="carouselExampleIndicators" class="carousel slide position-relative carousel-wrapper" data-bs-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide position carousel-wrapper" data-bs-ride="carousel">
     <!-- Overlay gelap -->
     <div class="position-absolute top-0 start-0 w-100 h-100"
      style="background-color: rgba(0, 0, 0, 0.6); z-index: 2; pointer-events: none;"></div>
