@@ -29,7 +29,23 @@ Route::get('/berita-galeri/create', CreateVideo::class)->name('berita-galeri.cre
 Route::get('/berita-galeri/show-video', ShowVideo::class)->name('berita-galeri.show-video');
 Route::get('/berita-galeri', BeritaGaleri::class)->name('berita-galeri.berita-galeri');
 
+Route::get('/profile', \App\Livewire\Tentang\Profile::class)->name('Profile');
+Route::get('/profile-pelaksana', \App\Livewire\Tentang\ProfilePelaksana::class)->name('Profile Pelaksana');
+Route::get('/profile-kadis', \App\Livewire\Tentang\ProfileKadis::class)->name('Profile Kepala Dinas');
+Route::get('/struktur-organisasi', \App\Livewire\Tentang\StrukturOrganisasi::class)->name('Struktur Organisasi');
+Route::get('/agenda', \App\Livewire\Tentang\Agenda::class)->name('Agenda');
+Route::get('/renstra', \App\Livewire\Tentang\Renstra::class)->name('Renstra');
+Route::get('/tupoksi', \App\Livewire\Tentang\Tupoksi::class)->name('Tupoksi');
+Route::get('/program-kerja', \App\Livewire\Tentang\ProgramKerja::class)->name('Program Kerja');
+Route::get('/kegiatan', \App\Livewire\Tentang\Kegiatan::class)->name('Kegiatan');
+Route::get('/data-izin-terbit', \App\Livewire\PelayananPerizinan\DataIzinTerbit::class)->name('Data Izin Terbit');
 
+Route::get('/potensi-investasi', \App\Livewire\PenanamanModal\PotensiInvestasi::class)->name('Potensi Investasi');
+Route::get('/realisasi-investasi', \App\Livewire\PenanamanModal\RealisasiInvestasi::class)->name('Realisasi Investasi');
+Route::get('/promosi-investasi', \App\Livewire\PenanamanModal\PromosiInvestasi::class)->name('Promosi Investasi');
+
+Route::get('/l-k-i-p', \App\Livewire\Informasi\Lkip::class)->name('LKIP');
+Route::get('/s-a-k-i-p', \App\Livewire\Informasi\Sakip::class)->name('SAKIP');
 // Route::view('dashboard', 'dashboard')
 //     ->middleware(['auth', 'verified'])
 //     ->name('dashboard');

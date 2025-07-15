@@ -38,6 +38,9 @@
         <span class="visually-hidden"></span>
     </button>
 </div>
+<livewire:beranda.cards />
+<livewire:beranda.content />
+<livewire:beranda.berita />
 <livewire:beranda.galeri-beranda />
 <livewire:beranda.pengumuman />
 </div>

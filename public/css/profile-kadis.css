@@ -1,0 +1,21 @@
+.kepala-card {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.kepala-section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+.kepala-bio p {
+    margin-bottom: 10px;
+}
+
+.kepala-bio i {
+    color: #0d6efd;
+    margin-right: 8px;
+}

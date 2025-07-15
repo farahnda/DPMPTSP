@@ -1,0 +1,47 @@
+/* === TOPBAR STYLE === */
+.topbar {
+  font-size: 0.875rem;
+}
+
+/* Kontak Info */
+.topbar .dpmptsp-contact {
+  font-weight: 500;
+  gap: 10px;
+}
+
+.topbar .dpmptsp-contact i {
+  color: #5c768d;
+  margin-right: 5px;
+}
+
+/* Icon Telepon */
+.topbar .dpmptsp-phone-icon {
+  margin-left: 15px;
+}
+
+/* Social Media */
+.topbar .dpmptsp-social a {
+  margin-left: 30px;
+  color: #5c768d;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.topbar .dpmptsp-social a:hover {
+  color: #0a58ca;
+}
+
+/* SP4N LAPOR! */
+.topbar .dpmptsp-lapor {
+  margin-left: 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #dc3545;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.topbar .dpmptsp-lapor:hover {
+  color: #bb2d3b;
+}

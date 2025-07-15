@@ -43,8 +43,8 @@
     @livewireStyles
 </head>
 <body>  
-    {{-- <livewire:topbar />
-    <livewire:navbar />     --}}
+    <livewire:topbar />
+    <livewire:navbar />
     
     <main>
         {{ $slot }}
@@ -57,11 +57,10 @@
 
     <livewire:footer />
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
     @livewireScripts
     @stack('scripts')
