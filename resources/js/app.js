@@ -1,7 +1,6 @@
 import lightGallery from 'lightgallery';
 
 // Import plugins
-import lgZoom from '@lg-plugins/zoom';
 import lgThumbnail from '@lg-plugins/thumbnail';
 
 // Optional: Import CSS (agar gak perlu link CDN di <head>)

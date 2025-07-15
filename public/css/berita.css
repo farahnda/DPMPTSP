@@ -1,0 +1,74 @@
+/* News Section */
+.news-card {
+  border-radius: 15px;
+  background-color: #f8f9fa;
+  padding: 15px;  
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.news-img {
+  width: 80px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.news-date {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.news-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #222;
+  line-height: 1.5;
+}
+
+
+/* === BERITA LAINNYA === */
+.berita-lainnya-scroll {
+    max-height: 700px;
+    overflow-y: auto;
+    padding: auto;
+}
+
+/* Warna dasar link di daftar berita lainnya */
+.berita-lainnya-scroll a {
+  color: #5c768d;
+  transition: color 0.3s ease;
+}
+
+/* Saat hover: gelapkan warna */
+.berita-lainnya-scroll a:hover {
+  color: #3e5569;
+  text-decoration: none; /* hilangkan underline */
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .news-card {
+        flex-direction: column !important;
+        text-align: left;
+    }
+
+    .news-text {
+        font-size: 14px;
+    }
+}
+
+.btn-custom-lainnya {
+  color: #5c768d;
+  border: 1px solid #5c768d;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-custom-lainnya:hover {
+  background-color: #5c768d;
+  color: #fff;
+}
