@@ -22,10 +22,10 @@
         </div>
 
         @if($galeris->count() >= $take)
-            <div class="text-center mt-4">
+            <div class="text-end mt-4">
                 {{-- <button wire:click="loadMore" class="btn btn-secondary">Tampilkan Lebih Banyak</button> --}}
                 <a href="galeri/show-galeri">
-                    <button class="btn btn-secondary">Tampilkan Lebih Banyak</button>
+                    <button class="btn btn-custom-lainnya">Tampilkan Lebih Banyak</button>
                 </a>
             </div>
         @endif

@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/content.css') }}">
     <link rel="stylesheet" href="{{ asset('css/berita.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/saran.css') }}">
 
     @stack('styles')
     @livewireStyles
