@@ -44,8 +44,8 @@ Route::get('/potensi-investasi', \App\Livewire\PenanamanModal\PotensiInvestasi::
 Route::get('/realisasi-investasi', \App\Livewire\PenanamanModal\RealisasiInvestasi::class)->name('Realisasi Investasi');
 Route::get('/promosi-investasi', \App\Livewire\PenanamanModal\PromosiInvestasi::class)->name('Promosi Investasi');
 
-Route::get('/l-k-i-p', \App\Livewire\Informasi\Lkip::class)->name('LKIP');
-Route::get('/s-a-k-i-p', \App\Livewire\Informasi\Sakip::class)->name('SAKIP');
+Route::get('/lkip', \App\Livewire\Informasi\LKIP::class)->name('LKIP');
+Route::get('/sakip', \App\Livewire\Informasi\SAKIP::class)->name('SAKIP');
 // Route::view('dashboard', 'dashboard')
 //     ->middleware(['auth', 'verified'])
 //     ->name('dashboard');

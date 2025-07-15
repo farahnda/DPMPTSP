@@ -8,6 +8,6 @@ class SAKIP extends Component
 {
     public function render()
     {
-        return view('livewire.informasi.s-a-k-i-p');
+        return view('livewire.informasi.sakip');
     }
 }

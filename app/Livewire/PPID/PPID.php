@@ -4,7 +4,7 @@ namespace App\Livewire\PPID;
 
 use Livewire\Component;
 
-class Ppid extends Component
+class PPID extends Component
 {
     public $icons = [];
 
