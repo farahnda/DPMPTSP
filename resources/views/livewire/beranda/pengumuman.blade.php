@@ -1,7 +1,9 @@
 <div>
     <hr>
     <div class="container py-5">
-        <h2 class="mb-4 text-center">Pengumuman</h2>
+        <div class="col-12 mb-4 text-center">
+            <div class="section-title">Pengumuman</div>
+        </div>
         <div id="lightgallery-pengumuman" class="row g-3">
             @foreach($pengumumans as $pengumuman)
             <div class="col-12 col-lg-4">

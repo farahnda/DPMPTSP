@@ -1,7 +1,9 @@
 <div>
     <hr>
     <div class="container py-5">
-        <h2 class="mb-4 text-center">Galeri</h2>
+        <div class="col-12 mb-4 text-center">
+            <div class="section-title">Galeri</div>
+        </div>
         <div id="lightgallery-foto" class="row g-3">
             @foreach ($galeris as $item)
                 <div class="col-12 col-lg-4">
