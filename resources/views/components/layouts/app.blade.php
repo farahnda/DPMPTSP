@@ -38,13 +38,10 @@
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/content.css') }}">
     <link rel="stylesheet" href="{{ asset('css/berita.css') }}">
-<<<<<<< HEAD
     <link rel="stylesheet" href="{{ asset('css/agenda.css') }}">
-=======
     <link rel="stylesheet" href="{{ asset('css/saran.css') }}">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
->>>>>>> 5d7f468d6d3fcf7f71f0f6d480c7dc826cb8c539
     @stack('styles')
     @livewireStyles
 </head>
