@@ -39,6 +39,7 @@ Route::get('/tupoksi', \App\Livewire\Tentang\Tupoksi::class)->name('Tupoksi');
 Route::get('/program-kerja', \App\Livewire\Tentang\ProgramKerja::class)->name('Program Kerja');
 Route::get('/kegiatan', \App\Livewire\Tentang\Kegiatan::class)->name('Kegiatan');
 Route::get('/data-izin-terbit', \App\Livewire\PelayananPerizinan\DataIzinTerbit::class)->name('Data Izin Terbit');
+Route::get('/agenda', \App\Livewire\Agenda\Agenda::class)->name('Agenda');
 
 Route::get('/potensi-investasi', \App\Livewire\PenanamanModal\PotensiInvestasi::class)->name('Potensi Investasi');
 Route::get('/realisasi-investasi', \App\Livewire\PenanamanModal\RealisasiInvestasi::class)->name('Realisasi Investasi');
@@ -46,6 +47,8 @@ Route::get('/promosi-investasi', \App\Livewire\PenanamanModal\PromosiInvestasi::
 
 Route::get('/lkip', \App\Livewire\Informasi\LKIP::class)->name('LKIP');
 Route::get('/sakip', \App\Livewire\Informasi\SAKIP::class)->name('SAKIP');
+
+
 // Route::view('dashboard', 'dashboard')
 //     ->middleware(['auth', 'verified'])
 //     ->name('dashboard');

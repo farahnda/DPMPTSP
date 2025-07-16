@@ -47,7 +47,7 @@
             <!-- Tombol Baca Berita Lainnya -->
             <div class="row justify-content-center mt-4">
                 <div class="btnlainnya">
-                    <a href="#" class="btn btn-custom-lainnya btn-lg w-100">Baca Berita Lainnya</a>
+                    <a href="{{ url('/berita-galeri') }}" class="btn btn-custom-lainnya btn-lg w-100">Baca Berita Lainnya</a>
                 </div>
             </div>
         </div>

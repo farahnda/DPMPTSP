@@ -1,0 +1,52 @@
+/* Pastikan semua card agenda punya tinggi seragam */
+.agenda.h-100 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 100px;
+    min-width: 100%;
+    border-radius: 0.75rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Header agenda */
+.agenda-header {
+    padding: 0.75rem 1rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    font-weight: 500;
+    font-size: 0.875rem;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+
+/* Body agenda */
+.agenda-body {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Judul agenda */
+.agenda-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #343a40;
+    flex-grow: 1;
+}
+
+.agenda-body .btn {
+    margin-top: auto;
+}
+
+@media (min-width: 992px) {
+    .row.row-cols-lg-4 > .col {
+        flex: 0 0 50%;
+        max-width: 50%;
+        display: flex;
+    }
+}

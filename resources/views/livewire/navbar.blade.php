@@ -64,8 +64,8 @@
              aria-expanded="false">INFORMASI</a>
           <ul class="dropdown-menu" aria-labelledby="dropdown4">
             <li><a class="dropdown-item" href="{{ url('/ikm') }}">IKM</a></li>
-            <li><a class="dropdown-item" href="{{ url('/l-k-i-p') }}">LKIP</a></li>
-            <li><a class="dropdown-item" href="{{ url('/s-a-k-i-p') }}">SAKIP</a></li>
+            <li><a class="dropdown-item" href="{{ url('/lkip') }}">LKIP</a></li>
+            <li><a class="dropdown-item" href="{{ url('/sakip') }}">SAKIP</a></li>
           </ul>
         </li>
 
