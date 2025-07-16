@@ -44,9 +44,9 @@
 }
 
 @media (min-width: 992px) {
-    .row.row-cols-lg-4 > .col {
-        flex: 0 0 50%;
-        max-width: 50%;
-        display: flex;
-    }
+  .agenda-row > .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+  }
 }

@@ -6,7 +6,7 @@
             </div>
         </div>
 
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-5 agenda-row">
             @foreach ($agenda as $item)
                 <div class="col">
                     <div class="agenda h-100 shadow-sm border-0">
