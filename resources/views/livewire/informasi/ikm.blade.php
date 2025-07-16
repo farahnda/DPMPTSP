@@ -1,7 +1,10 @@
 <section class="py-5">
     <div class="container">
-      
-        <h2 class="mb-4 text-center">Regulasi</h2>
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-12 mb-4">
+                <div class="section-title">IKM</div>
+            </div>
+        </div>
 
         <!-- Carousel -->
         <div id="ikmCarousel" class="carousel slide" data-bs-ride="carousel">

@@ -38,7 +38,13 @@
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/content.css') }}">
     <link rel="stylesheet" href="{{ asset('css/berita.css') }}">
+<<<<<<< HEAD
     <link rel="stylesheet" href="{{ asset('css/agenda.css') }}">
+=======
+    <link rel="stylesheet" href="{{ asset('css/saran.css') }}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+>>>>>>> 5d7f468d6d3fcf7f71f0f6d480c7dc826cb8c539
     @stack('styles')
     @livewireStyles
 </head>
@@ -61,6 +67,7 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     @livewireScripts
     @stack('scripts')

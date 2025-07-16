@@ -6,7 +6,10 @@
         </div>
         <div id="lightgallery-pengumuman" class="row g-3">
             @foreach($pengumumans as $pengumuman)
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4"
+                data-aos="fade-up"
+                data-aos-duration="600"
+                data-aos-delay="{{ $loop->index * 150 }}">
                 <a href="{{ $pengumuman['image'] }}" class="gallery-item" data-lg-size="1600-1067"
                     data-sub-html="<h4>{{ $pengumuman['title'] }}</h4><p>{{ $pengumuman['description'] }}</p>">
                     <div class="gallery-item-wrapper-auto shadow-sm">
@@ -51,6 +54,16 @@
             document.addEventListener('livewire:navigated', () => {
                 initGallery();
             });
+        </script>
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                once: false,
+                duration: 800,
+                easing: 'ease-out-cubic',
+            });
+        });
         </script>
         @endpush
     @endonce
